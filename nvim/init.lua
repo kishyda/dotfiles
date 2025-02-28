@@ -1,0 +1,6 @@
+require("config.lazy")
+require("config.settings")
+require("config.floating-term")
+require("config.keybinds")
+require("config.colormap")
+require("config.autocmd")

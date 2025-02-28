@@ -1,0 +1,4 @@
+[mounts]
+	path = /Users/ykp/.local/share/gopass/stores/root
+[recipients]
+	hash = 71aeae980fbe86ca802a369025167a3c66ee7d87367ff47081049011389bc5ec

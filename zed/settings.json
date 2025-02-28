@@ -1,0 +1,126 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    "project_panel": {
+        "dock": "right",
+        "indent_size": 25
+    },
+    "toolbar": {
+        // "breadcrumbs": false,
+        "quick_actions": false,
+        "selections_menu": false
+    },
+    "theme": "Rosé Pine",
+    "base_keymap": "VSCode",
+    "vim_mode": true,
+    "ui_font_size": 17,
+    "buffer_font_size": 15.0,
+    "tab_size": 4,
+    "auto_signature_help": true,
+    "show_signature_help_after_edits": true,
+    "format_on_save": "off",
+    "tab_bar": {
+        "show": false
+    },
+    "buffer_font_features": {
+        "calt": false
+    },
+    "experimental.theme_overrides": {
+        "editor.background": "#131313",
+        "panel.background": "#131313",
+        "tab_bar.background": "#131313",
+        "tab.inactive_background": "#131313",
+        "toolbar.background": "#131313",
+        "surface.background": "#131313",
+        "title_bar.background": "#131313",
+        "status_bar.background": "#131313",
+        "editor.gutter.background": "#131313",
+        "background.appearance": "transparent",
+        "background": "#131313"
+    },
+    "languages": {
+        "Python": {
+            "tab_size": 4,
+            "formatter": "language_server",
+            "format_on_save": "on"
+        },
+        "JavaScript": {
+            "tab_size": 4,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": ["--stdin-filepath", "{buffer_path}"]
+                }
+            }
+        },
+        "TypeScript": {
+            "tab_size": 4,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": ["--stdin-filepath", "{buffer_path}"]
+                }
+            }
+        },
+        "TSX": {
+            "tab_size": 4,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": ["--stdin-filepath", "{buffer_path}"]
+                }
+            }
+        },
+        "prettier": {
+            // // Whether to consider prettier formatter or not when attempting to format a file.
+            // "allowed": false,
+            //
+            // // Use regular Prettier json configuration.
+            // // If Prettier is allowed, Zed will use this for its Prettier instance for any applicable file, if
+            // // the project has no other Prettier installed.
+            // "plugins": [],
+            //
+            // // Use regular Prettier json configuration.
+            // // If Prettier is allowed, Zed will use this for its Prettier instance for any applicable file, if
+            // // the project has no other Prettier installed.
+            // "trailingComma": "es5",
+            "tabWidth": 4,
+            "semi": false,
+            "singleQuote": true
+        },
+        "inlay_hints": {
+            // Global switch to toggle hints on and off, switched off by default.
+            "enabled": true,
+            // Toggle certain types of hints on and off, all switched on by default.
+            "show_type_hints": true,
+            "show_parameter_hints": true,
+            // Corresponds to null/None LSP hint type value.
+            "show_other_hints": true,
+            // Whether to show a background for inlay hints.
+            //
+            // If set to `true`, the background will use the `hint.background` color from the current theme.
+            "show_background": false,
+            // Time to wait after editing the buffer, before requesting the hints,
+            // set to 0 to disable debouncing.
+            "edit_debounce_ms": 700,
+            // Time to wait after scrolling the buffer, before requesting the hints,
+            // set to 0 to disable debouncing.
+            "scroll_debounce_ms": 50
+        },
+        "telemetry": {
+            // Send debug info like crash reports.
+            "diagnostics": false,
+            // Send anonymized usage data like what languages you're using Zed with.
+            "metrics": false
+        },
+        "tab_bar": {
+            "show": true
+        }
+    }
+}
