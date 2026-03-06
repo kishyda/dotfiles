@@ -251,7 +251,8 @@ return {
                 ["tinymist"] = {},
                 ["tailwindcss"] = {},
                 ["zls"] = {},
-                ["postgres_lsp"] = {}
+                ["postgres_lsp"] = {},
+                ["texlab"] = {}
             }
             for key, value in pairs(lspconfigs) do
                 vim.lsp.config(key, value)
