@@ -183,7 +183,7 @@ return {
                 -- },
                 ["sourcekit"] = {
                     -- cmd = { "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp" },
-                    filetypes = { "swift", "swiftinterface", "objc", "objcpp", "hpp", "h" },
+                    filetypes = { "swift", "swiftinterface", "objc", "objcpp", "cpp", "hpp", "h" },
                 },
                 ["gopls"] = {
                     settings = {
@@ -245,6 +245,11 @@ return {
                                 },
                             },
                         },
+                    }
+                },
+                ["cmake-language-server"] = {
+                    settings = {
+                        cmd = { 'cmake-language-server' },
                     }
                 },
                 ["ts_ls"] = {},
