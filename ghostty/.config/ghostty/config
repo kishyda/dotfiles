@@ -4,7 +4,7 @@ macos-window-buttons = hidden
 window-subtitle = false
 
 font-family = Iosevka Custom 
-font-size = 23
+font-size = 21
 # font-thicken = true
 font-thicken-strength = 255
 
@@ -12,9 +12,10 @@ cursor-style = block
 cursor-text = cell-background
 cursor-color = cell-foreground
 
-background = 151515
+theme = Rose Pine
+# background = 151515
 # background-opacity = 0.8
 # background-blur = 20
-minimum-contrast = 1.1
+# minimum-contrast = 1.1
 
 custom-shader = ~/.config/ghostty/shaders/cursor_smear_fade.glsl

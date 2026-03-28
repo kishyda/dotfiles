@@ -17,7 +17,7 @@ after-login-command = []
 #   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 # ]
 
-exec-on-workspace-change = ["/bin/bash", "-c", 'sketchybar --trigger aerospace_workspace_change ']
+exec-on-workspace-change = []
 
 # Start AeroSpace at login
 start-at-login = false
@@ -222,129 +222,42 @@ alt-shift-l = ['join-with right', 'mode main']
 #     run = 'layout floating'
 
 [[on-window-detected]]
-    if.app-id = 'org.alacritty'
-    run = ['layout floating', 'move-node-to-workspace D']
-
-[[on-window-detected]]
-    if.app-id = 'com.mitchellh.ghostty'
-    run = 'move-node-to-workspace C'
-
-[[on-window-detected]]
-    if.app-id = 'net.kovidgoyal.kitty'
-    run = 'move-node-to-workspace D'
-
-[[on-window-detected]]
-    if.app-id = 'com.microsoft.VSCode'
-    run = 'move-node-to-workspace D'
-
-[[on-window-detected]]
-    if.app-id = 'dev.zed.Zed'
-    run = 'move-node-to-workspace D'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
-    run = 'move-node-to-workspace A'
-
-[[on-window-detected]]
-    if.app-id = 'com.kagi.kagimacOS'
-    run = 'move-node-to-workspace A'
-
-[[on-window-detected]]
-    if.app-id = 'app.zen-browser.zen'
-    run = 'move-node-to-workspace A'
-
-[[on-window-detected]]
-    if.app-id = 'md.obsidian'
-    run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.iWork.Pages'
-    run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.Notes'
-    run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.iBooksX'
-    run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-    if.app-id = 'com.ricoapps.jisho'
-    run = 'move-node-to-workspace W'
-
-[[on-window-detected]]
-    if.app-id = 'net.ankiweb.dtop'
-    run = 'move-node-to-workspace W'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace E'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace E'
-
-[[on-window-detected]]
-    if.app-id = 'com.docker.docker'
-    run = 'move-node-to-workspace R'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.dt.Xcode'
-    run = 'move-node-to-workspace X'
-
-[[on-window-detected]]
-    if.app-id = 'com.postmanlabs.mac'
-    run = 'move-node-to-workspace R'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.SFSymbols'
-    run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.finder'
     run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-    if.app-id = 'com.apple.systempreferences'
+    if.app-id = 'com.brave.Browser'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-id = 'app.zen-browser.zen'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
     run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-    if.app-id = 'com.apple.ActivityMonitor'
+    if.app-id = 'com.microsoft.VSCode'
     run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-    if.app-id = 'com.nordvpn.macos'
-    run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-    if.app-id = 'com.spotify.client'
-    run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.Music'
-    run = 'move-node-to-workspace 3'
+    run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
     if.app-id = 'com.hnc.Discord'
-    run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-    if.app-id = 'net.whatsapp.WhatsApp'
-    run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-    if.app-id = 'jp.naver.line.mac'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.MobileSMS'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
-    if.app-id = 'com.talahapps.Ayah'
-    run = 'move-node-to-workspace Q'
+    if.app-id = 'com.nordvpn.macos'
+    run = 'move-node-to-workspace 5'
 
-[[on-window-detected]]
-    if.app-id = 'com.quran.ios'
-    run = 'move-node-to-workspace Q'

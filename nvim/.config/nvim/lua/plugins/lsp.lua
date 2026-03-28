@@ -178,12 +178,14 @@ return {
                         "/tmp/jdtls-workspace",    -- a fixed workspace directory for single files
                     },
                 },
-                -- ["clangd"] = {
-                --     cmd = { "/opt/homebrew/opt/llvm/bin/clangd" }
-                -- },
+                ["clangd"] = {
+                    cmd = { "/opt/homebrew/opt/llvm/bin/clangd" }
+                },
                 ["sourcekit"] = {
                     -- cmd = { "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp" },
-                    filetypes = { "swift", "swiftinterface", "objc", "objcpp", "cpp", "hpp", "h" },
+                    filetypes = { "swift", "swiftinterface",
+                        -- "objc", "objcpp", "cpp", "hpp", "h"
+                    },
                 },
                 ["gopls"] = {
                     settings = {
@@ -248,9 +250,12 @@ return {
                     }
                 },
                 ["cmake-language-server"] = {
-                    settings = {
-                        cmd = { 'cmake-language-server' },
-                    }
+                    cmd = { 'cmake-language-server' },
+                    filetypes = { 'cmake' },
+                    root_markers = { 'CMakePresets.json', 'CTestConfig.cmake', '.git', 'build', 'cmake' },
+                    init_options = {
+                        buildDirectory = 'build',
+                    },
                 },
                 ["ts_ls"] = {},
                 ["tinymist"] = {},

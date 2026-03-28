@@ -219,7 +219,7 @@ local function setLightMode()
 	})
 
 	-- Apply the color scheme
-	vim.cmd("colorscheme rose-pine")
+	-- vim.cmd("colorscheme rose-pine")
 
 	-- Define custom highlight color (reuse the same color for various elements)
 	local highlight_color = "#FAF4ED"
@@ -259,4 +259,4 @@ end
 vim.api.nvim_create_user_command("LM", setLightMode, {})
 vim.api.nvim_create_user_command("DM", setDarkMode, {})
 
-setDarkMode()
+-- setDarkMode()
