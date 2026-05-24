@@ -39,7 +39,6 @@ return {
                 }
             end
 
-
             -- `/` cmdline setup.
             cmp.setup.cmdline("/", {
                 mapping = cmp.mapping.preset.cmdline(),
@@ -173,13 +172,16 @@ return {
                 },
                 ["jdtls"] = {
                     cmd = {
-                        "/opt/homebrew/bin/jdtls", -- or wherever your jdtls binary is
+                        "jdtls", -- or wherever your jdtls binary is
                         "-data",
                         "/tmp/jdtls-workspace",    -- a fixed workspace directory for single files
                     },
                 },
                 ["clangd"] = {
-                    cmd = { "/opt/homebrew/opt/llvm/bin/clangd" }
+                    cmd = {
+                        "clangd",
+                        "--query-driver=**/g++,**/gcc,/nix/store/*/bin/g++,/nix/store/*/bin/gcc",
+                    },
                 },
                 ["sourcekit"] = {
                     -- cmd = { "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp" },
@@ -262,7 +264,8 @@ return {
                 ["tailwindcss"] = {},
                 ["zls"] = {},
                 ["postgres_lsp"] = {},
-                ["texlab"] = {}
+                ["texlab"] = {},
+                ["nil_ls"] = {}
             }
             for key, value in pairs(lspconfigs) do
                 vim.lsp.config(key, value)
