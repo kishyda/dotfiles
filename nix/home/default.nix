@@ -7,12 +7,7 @@
     imports = [
       ./packages.nix
       ./dotfiles.nix
-      ./zsh.nix
     ];
-
-    home.sessionVariables = {
-      EDITOR = "nvim";
-    };
 
     programs.git = {
       enable = true;
