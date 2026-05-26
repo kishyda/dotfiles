@@ -14,6 +14,7 @@
       ]
       ++ lib.optionals pkgs.stdenv.isLinux [
         # Linux-specific packages can go here.
+        bitwarden-desktop bitwarden-cli
       ]
       ++ lib.optionals pkgs.stdenv.isDarwin [
         # Darwin-specific nix packages, if any.
