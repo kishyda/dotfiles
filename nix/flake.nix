@@ -18,15 +18,17 @@
 
     outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
     let
-        username = "pyonpyon";
+        darwinUsername = "pyonpyon";
+        linuxUsername = "keeper";
         darwinSystem = "aarch64-darwin";
         linuxSystem = "x86_64-linux";
     in
     {
-        darwinConfigurations."pyonpyon" = nix-darwin.lib.darwinSystem {
+        darwinConfigurations.darwinUsername = nix-darwin.lib.darwinSystem {
             system = darwinSystem;
             specialArgs = {
-                inherit self username;
+                username = darwinUsername;
+                inherit self; 
             };
 
             modules = [
@@ -39,16 +41,16 @@
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.verbose = true;
-                    home-manager.users.${username} = {
+                    home-manager.users.${darwinUsername} = {
                         imports = [ ./home ];
-                        home.username = username;
-                        home.homeDirectory = "/Users/${username}";
+                        home.username = darwinUsername;
+                        home.homeDirectory = "/Users/${darwinUsername}";
                     };
                 }
             ];
         };
 
-        homeConfigurations."${username}-linux" = home-manager.lib.homeManagerConfiguration {
+        homeConfigurations."${linuxUsername}-linux" = home-manager.lib.homeManagerConfiguration {
             pkgs = import nixpkgs {
                 system = linuxSystem; 
                 config.allowUnfree = true;
@@ -58,8 +60,8 @@
                 ./home
                 ./hosts/linux
                 {
-                    home.username = username;
-                    home.homeDirectory = "/home/${username}";
+                    home.username = linuxUsername;
+                    home.homeDirectory = "/home/${linuxUsername}";
                 }
             ];
         };
