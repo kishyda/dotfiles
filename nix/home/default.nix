@@ -1,12 +1,13 @@
 { ... }:
 
 {
-    home.stateVersion = "26.05";
+    home.stateVersion = "25.11";
     programs.home-manager.enable = true;
 
     imports = [
       ./packages.nix
       ./dotfiles.nix
+      ./zsh.nix
     ];
 
     home.sessionVariables = {
