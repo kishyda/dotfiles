@@ -5,6 +5,7 @@
       ".config/nvim".source = ../../nvim;
       ".config/yazi".source = ../../yazi;
       ".config/ghostty".source = ../../ghostty;
+      ".config/zsh".source = ../../zsh;
       ".tmux.conf".source = ../../tmux/.tmux.conf;
       ".zshrc".source = ../../zsh/.zshrc;
       ".zshenv".source = ../../zsh/.zshenv;

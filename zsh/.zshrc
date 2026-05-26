@@ -1,5 +1,7 @@
 PROMPT="[%F{143}%~%f] %F{242}%#%f "
 
+source $HOME/.config/zsh/oh-my-zsh.zsh
+
 autoload -Uz compinit && compinit
 # Ignore case
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
