@@ -1,14 +1,16 @@
 PROMPT="[%F{143}%~%f] %F{242}%#%f "
 
-source $HOME/.config/zsh/oh-my-zsh.zsh
-
 autoload -Uz compinit && compinit
 # Ignore case
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# eval "$(starship init zsh)"
+for brew in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+  if [ -x "$brew" ]; then
+    eval "$("$brew" shellenv)"
+    break
+  fi
+done
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 source <(fzf --zsh)
 
 eval "$(direnv hook zsh)"
