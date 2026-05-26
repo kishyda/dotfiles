@@ -18,7 +18,7 @@
 
     outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
     let
-        username = "keeper";
+        username = "pyonpyon";
         darwinSystem = "aarch64-darwin";
         linuxSystem = "x86_64-linux";
     in
