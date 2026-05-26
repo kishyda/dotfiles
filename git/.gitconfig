@@ -19,6 +19,9 @@
     # dark = true
     # light = true
 
+[pull]
+    rebase = true
+
 [merge]
     conflictstyle = diff3
 
