@@ -7,13 +7,18 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 for brew in /opt/homebrew/bin/brew /usr/local/bin/brew; do
   if [ -x "$brew" ]; then
     eval "$("$brew" shellenv)"
+    source "$(brew --prefix fzf-tab)/share/fzf-tab/fzf-tab.zsh"
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
     break
   fi
 done
 
 source <(fzf --zsh)
-
+eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
+
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 case "$(uname)" in
