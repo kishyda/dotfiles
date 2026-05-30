@@ -152,6 +152,10 @@ return {
                 table.insert(module_paths, actual_path)
             end
             local lspconfigs = {
+                ["bashls"] = {
+                    cmd = { 'bash-language-server', 'start' },
+                    filetypes = { 'bash', 'sh', 'zsh' },
+                },
                 ["lua_ls"] = {
                     settings = {
                         Lua = {
@@ -180,7 +184,7 @@ return {
                 ["clangd"] = {
                     cmd = {
                         "clangd",
-                        "--query-driver=**/g++,**/gcc,/nix/store/*/bin/g++,/nix/store/*/bin/gcc",
+                        "--query-driver=**/g++-15,**/gcc-15,/nix/store/*/bin/g++-15,/nix/store/*/bin/gcc-15",
                     },
                 },
                 ["sourcekit"] = {

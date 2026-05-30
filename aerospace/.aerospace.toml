@@ -146,20 +146,20 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
-# Terminal
-alt-t = 'exec-and-forget open -n /Applications/Ghostty.app'
-# Browser
-alt-b = 'exec-and-forget open -n /Applications/Helium.app'
-# Code Editor
-alt-c = 'exec-and-forget open -n -a "Visual Studio Code" --args --new-window'
-# Notes
-alt-n = 'exec-and-forget open -n /Applications/Obsidian.app'
-# Password Manager
-alt-p = 'exec-and-forget open -n /Applications/Bitwarden.app'
-# File Manager
-alt-f = 'exec-and-forget osascript -e "tell application \"Finder\" to make new Finder window to home"'
-# System Settings
-alt-s = 'exec-and-forget open -a "Settings"'
+# # Terminal
+# alt-t = 'exec-and-forget open -n /Applications/Ghostty.app'
+# # Browser
+# alt-b = 'exec-and-forget open -n /Applications/Helium.app'
+# # Code Editor
+# alt-c = 'exec-and-forget open -n -a "Visual Studio Code" --args --new-window'
+# # Notes
+# alt-n = 'exec-and-forget open -n /Applications/Obsidian.app'
+# # Password Manager
+# alt-p = 'exec-and-forget open -n /Applications/Bitwarden.app'
+# # File Manager
+# alt-f = 'exec-and-forget osascript -e "tell application \"Finder\" to make new Finder window to home"'
+# # System Settings
+# alt-s = 'exec-and-forget open -a "Settings"'
 
 
 # 'service' binding mode declaration.
