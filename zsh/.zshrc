@@ -1,4 +1,4 @@
-PROMPT="[%F{#31748f}%n@%m%f %F{143}%~%f] %F{242}%#%f "
+PROMPT="%F{242}[%f%F{#31748f}%n@%m%f %F{143}%~%f%F{242}]%f %F{242}%#%f "
 
 autoload -Uz compinit && compinit
 # Ignore case
