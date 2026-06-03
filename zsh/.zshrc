@@ -4,14 +4,14 @@ autoload -Uz compinit && compinit
 # Ignore case
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-for brew in /opt/homebrew/bin/brew /usr/local/bin/brew; do
-  if [ -x "$brew" ]; then
-    source "$(brew --prefix fzf-tab)/share/fzf-tab/fzf-tab.zsh"
-    source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-    source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-    break
-  fi
-done
+if [ -x "/opt/homebrew/bin/brew" ]; then
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$(brew --prefix rustup)/bin:$PATH"
+source "$(brew --prefix fzf-tab)/share/fzf-tab/fzf-tab.zsh"
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"

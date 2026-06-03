@@ -1,4 +1,9 @@
+export VCPKG_ROOT=$HOME/Dev/vcpkg
+export PATH=$VCPKG_ROOT:$PATH
+export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
 export EDITOR="nvim"
+
 export SUDO_EDITOR="nvim"
 export VISUAL="nvim"
 export MANPAGER="nvim +Man!"

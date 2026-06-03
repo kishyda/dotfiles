@@ -8,7 +8,7 @@ font-size = 18
 # font-thicken = true
 font-thicken-strength = 255
 
-cursor-style = block
+cursor-style = block 
 cursor-text = cell-background
 cursor-color = cell-foreground
 
